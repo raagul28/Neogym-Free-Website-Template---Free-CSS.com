@@ -1,7 +1,5 @@
 pipeline {
-  agent { docker { image 'gradle:8.2.0-jdk17-alpine' }
-      reuseNode true }
-
+  agent {dockerfile true}
   stages {
     stage('test'){
       agent any
